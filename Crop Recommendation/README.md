@@ -22,6 +22,6 @@ Precision agriculture is in trend nowadays. It helps the farmers to get informed
 4. Scikit-Learn
 
 # Algorithm
-1. Decision Tree.\
+1. Decision Tree.
 
 Model Accuracy-98.54 %
