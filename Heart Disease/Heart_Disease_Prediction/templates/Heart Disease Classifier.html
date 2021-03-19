@@ -1,0 +1,180 @@
+<html>
+	<head>
+	<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+		<title>Heart Disease Test</title>
+		<link rel="shortcut icon" href="https://prediction-of-diabetes.herokuapp.com/static/diabetes-favicon.ico">
+	</head>
+	<body style="background-color:lightgreen;">
+	<!-- Java Script -->	
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+		
+		<!-- Navbar-->
+			<nav class="navbar navbar-dark bg-secondary">
+		<span class="navbar-brand mb-0 h1"><b>Heart Disease Test</b></span>
+
+<ul class="nav navbar-nav ml-auto">
+	<li>
+  <a class="navbar-brand" href="https://www.google.com/" target="_blank">
+    <img src="https://raw.githubusercontent.com/Automattic/social-logos/master/svg-min/github.svg" width="30" height="30" alt="">
+  </a>
+  <a class="navbar-brand" href="https://www.google.com/" target="_blank">
+    <img src="https://raw.githubusercontent.com/Automattic/social-logos/master/svg-min/medium.svg" width="30" height="30" alt="">
+  </a>
+  <a class="navbar-brand" href="https://www.google.com/" target="_blank">
+    <img src="https://raw.githubusercontent.com/Automattic/social-logos/master/svg-min/linkedin.svg" width="30" height="30" alt="">
+  </a>
+</li>
+</ul>
+
+
+</nav>
+		
+		<div class="container" >
+			
+			<br>
+
+			 <div class="container">
+            <h2 class="container-heading" align="center"><span class="heading_font">Heart Disease Test Form</span></h2>
+            <div class = "description" align="center">
+                <p>A Machine Learning web app built with Flask and Deployed on Heroku Cloud</p>
+            </div>
+        </div>
+			<!--Form-->
+			<form action = "/predict" method ="POST" >
+				<fieldset>
+				
+				  <div class="card card-body" style="width: 948px ;margin-left: 50px; margin-right:-; " >
+					  <div class="form-group  row">
+
+					  	<div class="col-sm">
+							<label for="name"><b>Name</b></label>
+							<input type="text" class="form-control" id="name" name="name" placeholder="Name">
+						  </div>
+						<div class="col-sm-3">
+							<label for="age"><b>Age</b></label>
+							<input type="number" class="form-control" id="age" name="age" required placeholder="Age">
+						</div>
+						<div class="col-sm-3">
+							<label for="sex"><b>Sex</b></label>
+							<select class="form-control" id="sex"  name="sex" required>
+							  <option disabled selected value> -- Select an Option -- </option>
+							  <option value = "0" style="font-weight: bold"><b>Male</b></option>
+							  <option value = "1"style="font-weight: bold">Female</option>
+							</select>
+					   </div>
+					  					  </div>
+					  <br>
+					  <div class="form-group  row">
+						  <div class="col-sm">
+							<label for="cp"><b>Chest Pain Type</b></label><br><br>
+							<select class="form-control" id="cp" name = "cp" required>
+							  <option disabled selected value> -- Select an Option -- </option>
+							  <option value = "0" style="font-weight: bold">Typical Angina</option>
+							  <option value = "1" style="font-weight: bold">Atypical Angina</option>
+							  <option value = "2" style="font-weight: bold">Non-anginal Pain</option>
+							  <option value = "3" style="font-weight: bold">Asymptomatic</option>
+							</select>
+						  </div>
+						  <div class="col-sm">
+							<label for="trestbps"><b>Resting Blood Pressure in mm Hg</b></label>
+							<input type="number" class="form-control" id="trestbps" name="trestbps"  required placeholder="Resting Blood Pressure">
+						  </div>
+						  <div class="col-sm">
+							<label for="chol"><b>Serum Cholestoral in mg/dl</b></label>
+							<input type="number" class="form-control" id="chol" name="chol" required placeholder="Serum Cholestoral">
+						  </div>
+						  <div class="col-sm">
+							<label for="fbs"><b>Fasting Blood Sugar > 120 mg/dl</b></label>
+							<select class="form-control" id="fbs" name="fbs" required >
+							  <option disabled selected value> -- Select an Option -- </option>
+							  <option value = "0" style="font-weight: bold">False</option>
+							  <option value = "1" style="font-weight: bold">True</option>
+							</select>
+						</div>
+					  </div>
+					  
+					  <br>
+					  <div class="form-group row">
+							<div class="col-sm">
+								<label for="restecg"><b>Resting ECG Results</b> </label>
+								<select class="form-control" id="restecg" name="restecg" required>
+								  <option disabled selected value> -- Select an Option -- </option>
+								  <option value = "0" style="font-weight: bold">Normal</option>
+								  <option value = "1" style="font-weight: bold">Having ST-T wave abnormality  </option>
+								  <option value = "2" style="font-weight: bold"> Probable or definite left ventricular hypertrophy  </option>
+								</select>
+							  </div>
+							  <div class="col-sm">
+								<label for="thalach"><b>Maximum Heart Rate</b></label>
+								<input type="number" class="form-control" id="thalach" name="thalach" required placeholder="Maximum Heart Rate">
+							  </div>
+							  <div class="col-sm">
+								<label for="oldpeak"><b>ST Depression Induced</b></label>
+								<input type="number" step="any" class="form-control" id="oldpeak" name="oldpeak" required placeholder="ST Depression Induced">
+							  </div>
+							  <div class="col-sm">
+								<label for="exang"><b>Exercise Induced Angina</b> </label>
+								<select class="form-control" id="exang" name="exang" required>
+								  <option disabled selected value> -- Select an Option -- </option>
+								  <option value = "0" style="font-weight: bold">No</option>
+								  <option value = "1" style="font-weight: bold">Yes</option>
+								</select>
+							  </div>
+						  </div>
+						  <br>
+						  <div class="form-group  row">
+						  <div class="col-sm">
+							<label for="slope"><b>Slope of the Peak Exercise ST Segment</b> </label>
+							<select class="form-control" id="slope" name="slope" required>
+							  <option disabled selected value> -- Select an Option -- </option>
+							  <option value = "0">Upsloping</option>
+							  <option value = "1">Flat</option>
+							  <option value = "2">Downsloping</option>
+							</select>
+						  </div>
+						  <div class="col-sm">
+							<label for="ca"><b>Number of Vessels Colored by Flourosopy</b></label>
+							<select class="form-control" id="ca" name = "ca" required>
+							  <option disabled selected value> -- Select an Option -- </option>
+							  <option value = "0" style="font-weight: bold">0</option>
+							  <option value = "1" style="font-weight: bold">1</option>
+							  <option value = "2" style="font-weight: bold">2</option>
+							  <option value = "3" style="font-weight: bold">3</option>
+							</select>
+						  </div>
+						  <div class="col-sm">
+							<label for="thal"><b>Thalassemia</b></label><br><br>
+							<select class="form-control" id="thal" name = "thal" required>
+							  <option disabled selected value> -- Select an Option -- </option>
+							  <option value = "3" style="font-weight: bold">Normal</option>
+							  <option value = "6" style="font-weight: bold">Fixed defect</option>
+							  <option value = "7" style="font-weight: bold">Reversable defect</option>
+							</select>
+						  </div>
+					  </div>
+					  <br>
+					  <div class="form-group">
+						<input class="btn btn-primary" type="submit" value="Result">
+					  </div>
+					  
+					  <!--Prediction Result-->
+					  <div id ="result">
+							<strong style="color:red">{{result}}</strong>
+					 </div>
+				     </div>
+			 </fieldset>
+
+			</form>
+			
+		</div>
+		
+	</body>
+</html>
+
