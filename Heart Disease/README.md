@@ -1,12 +1,12 @@
-# Exploratory Data Analysis For Heart Disease-
+# Exploratory Data Analysis For Heart Disease
 I have perform EDA on heart disease to understand each features and their relation with each other as well as with the target feature.
 
 
-# Dataset Information-
+# Dataset Information
 This database contains 76 attributes, but all published experiments refer to using a subset of 14 of them. In particular, the Cleveland database is the only one that has been used by ML researchers to this date. The "goal" field refers to the presence of heart disease in the patient. It is integer valued from 0 (no presence) to 4.
 
 
-# Attribute Information:-
+# Attribute Information
 1. Age: age in years.\
 2. Sex: sex (1 = male; 0 = female).\
 3. CP: chest pain type (Value 0: typical angina; Value 1: atypical angina; Value 2: non-anginal pain; Value 3: asymptomatic).\
@@ -23,13 +23,14 @@ This database contains 76 attributes, but all published experiments refer to usi
 14. Target: heart disease (1 = no, 2 = yes)\
 
 
-# Libraries-
+# Libraries
 1. Pandas
 2. Matplotlib
 3. Seaborn
+4. Scikit-Learn
 
-# Algorithm-
+# Algorithm
 1. KNN Algorithm
 
-Model Accuracy-79.41
+Model Accuracy-79.41 %
 

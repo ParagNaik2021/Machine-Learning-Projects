@@ -1,0 +1,45 @@
+{% extends "nav.html" %}
+{% block body %}
+
+
+<body style="background-image: url('https://images.unsplash.com/photo-1511735643442-503bb3bd348a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80')">
+<form action="/predict" method="POST" class="row g-3" style=" padding-top: 60px; padding-left: 40px;padding-right: 40px">
+  <div class="col-md-4">
+    <label for="nitrogen" class="form-label"><b>Nitrogen content</b></label>
+    <input type="number"  name="nitrogen" id="duration" class="form-control" placeholder="Ratio of Nitrogen content in soil" step="any" required>
+  </div><br>
+  <div class="col-md-4">
+    <label for="phosphorus" class="form-label"><b>Phosphorus content</b></label>
+     <input type="number" name="phosphorus" id="phosphorus" class="form-control" placeholder="Ratio of Phosphorus content in soil" step='any' required>
+  </div>
+  <div class="col-md-4">
+    <label for="potassium" class="form-label"><b>Potassium content</b></label>
+    <input type="number" name="potassium" id="potassium" class="form-control" placeholder="Ratio of Potassium content in soil" step="any" required>
+  </div>
+  <div class="col-md-4">
+    <label for="temperature" class="form-label"><br><b>Temperature in degree Celsius</b></label>
+    <input type="number" name="temperature" id="temperature" class="form-control" placeholder="Temperature in degree Celsius" step="any" required>
+  </div>
+ <div class="col-md-4">
+    <label for="humidity" class="form-label"><br><b>Relative humidity in %</b></label>
+    <input type="number" name="humidity" id="temperature" class="form-control" placeholder="Relative humidity in %" step="any" required>
+  </div>
+<div class="col-md-4">
+    <label for="ph" class="form-label"><br><b>pH value of soil</b></label>
+    <input type="number" name="ph" id="ph" class="form-control" placeholder="pH value" step='any' required>
+  </div>
+  <div class="col-md-4">
+    <label for="rainfall" class="form-label"><br><b>Average Rainfall in mm</b></label>
+    <input type="number" name="rainfall" id="rainfall" class="form-control" placeholder="Rainfall in mm" step='any' required>
+  </div>
+
+  <div class="col-12" align="center">
+    <br>
+    <button type="submit" class="btn btn-primary" value="predict">Predict</button>
+  </div>
+</form>
+					  
+
+</body>
+
+{% endblock %}
