@@ -8,12 +8,12 @@ Precision agriculture is in trend nowadays. It helps the farmers to get informed
 
 # Attribute Information
 1. N - Ratio of Nitrogen content in soil.
-2. P - Ratio of Phosphorous content in soil.\
-3. K - Ratio of Potassium content in soil.\
-4. Temperature - Temperature in degree Celsius.\
-5. Humidity - Relative humidity in %.\
-6. pH - pH value of the soil.\
-7. Rainfall - Rainfall in mm.\
+2. P - Ratio of Phosphorous content in soil.
+3. K - Ratio of Potassium content in soil.
+4. Temperature - Temperature in degree Celsius.
+5. Humidity - Relative humidity in %.
+6. pH - pH value of the soil.
+7. Rainfall - Rainfall in mm.
 
 # Libraries
 1. Pandas
