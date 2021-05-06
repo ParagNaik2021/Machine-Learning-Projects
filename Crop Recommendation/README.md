@@ -7,7 +7,7 @@ Precision agriculture is in trend nowadays. It helps the farmers to get informed
 
 
 # Attribute Information
-1. N - Ratio of Nitrogen content in soil.\
+1. N - Ratio of Nitrogen content in soil.
 2. P - Ratio of Phosphorous content in soil.\
 3. K - Ratio of Potassium content in soil.\
 4. Temperature - Temperature in degree Celsius.\
