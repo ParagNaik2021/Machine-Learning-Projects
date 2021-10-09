@@ -21,8 +21,8 @@ def prediction():
             ph=float(request.form['ph'])
             rainfall=float(request.form['rainfall'])
 
-            filename='modelForPrediction.sav'
-            load_model=pickle.load(open(filename,'rb'))
+            FileName='modelForPrediction.sav'
+            load_model=pickle.load(open(FileName,'rb'))
             prediction=load_model.predict([[nitrogen,phosphorus,potassium,temperature,humidity,ph,rainfall]])
             print(prediction[0])
             if prediction[0]=='cotton':
